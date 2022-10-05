@@ -1,10 +1,29 @@
 ---
 layout: base
-title: Home
+title: Space Collection
 ---
+
+<!-- photo collection (space) id: vsjdlqy-->
+
 <header>
     <h1>{{ title }} </h1>
+
+    <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+     </nav>
 </header>
+
+<main>
+    <ul>
+        {% for photo in photos.vsjdlqy.media -%}
+            <img src = "{{photo.src.tiny}}" alt = "{{photo.alt}}">
+        {% endfor -%}
+    </ul>
+
+</main>
 
 <footer>
     <hr>

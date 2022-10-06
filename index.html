@@ -11,7 +11,7 @@ title: Space Collection
     <nav>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="/about">About Us</a></li>
         </ul>
      </nav>
 </header>
@@ -19,7 +19,7 @@ title: Space Collection
 <main>
     <ul>
         {% for photo in photos.vsjdlqy.media -%}
-            <img src = "{{photo.src.tiny}}" alt = "{{photo.alt}}">
+            <a href = "{{photo.src.large}}"><img src = "{{photo.src.tiny}}" alt = "{{photo.alt}}" ></a>
         {% endfor -%}
     </ul>
 

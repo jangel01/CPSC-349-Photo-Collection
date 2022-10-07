@@ -1,0 +1,22 @@
+---
+layout: base.html
+title: Space Collection
+
+pagination:
+    data: photos.vsjdlqy.media
+    size: 1
+---
+
+<main>
+    <a href = "../../../index.html">Back to home page</a>
+    
+    <ul>
+        {% for photo in pagination.items -%}
+            <img src = "{{photo.src.landscape}}" alt = "{{photo.alt}}">
+        {% endfor -%}
+
+    </ul>
+
+
+
+</main>

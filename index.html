@@ -18,9 +18,12 @@ title: Space Collection
 </header>
 
 <main>
+
     {% for photo in photos.vsjdlqy.media %}
         <a href = "photos/{{photo.id}}"><img src = "{{photo.src.tiny}}" alt = "{{photo.alt}}" ></a>
     {% endfor %}
+    
+    
 </main>
 
 <footer>

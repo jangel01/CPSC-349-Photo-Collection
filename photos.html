@@ -1,15 +1,16 @@
 ---
 layout: base.html
-title: Space Collection
 
 pagination:
     data: photos.vsjdlqy.media
     size: 1
     alias: photo
+    
+permalink: photos/{{ photo.id}}/
 
 eleventyComputed:
-    title: {{ photo.alt }}
-    permalink: photos/{{ photo.id}}/
+    title: "{{photo.alt}}"
+
 ---
 
 
@@ -23,14 +24,9 @@ eleventyComputed:
 </header>
 
 <main>
+      
+    {% for photo in pagination.items %}
+        <img src = "{{photo.src.landscape}}" alt = "{{photo.alt}}">
+    {% endfor %}
     
-    
-    <ul>
-        {% for photo in pagination.items %}
-            <img src = "{{photo.src.landscape}}" alt = "{{photo.alt}}">
-        {% endfor %}
-    </ul>
-
-
-
 </main>

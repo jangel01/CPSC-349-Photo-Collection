@@ -1,0 +1,36 @@
+---
+layout: base.html
+title: Space Collection
+
+pagination:
+    data: photos.vsjdlqy.media
+    size: 1
+    alias: photo
+
+eleventyComputed:
+    title: {{ photo.alt }}
+    permalink: photos/{{ photo.id}}/
+---
+
+
+<header>
+    <h1> {{title}}</h1>
+    <nav>
+        <ul>
+           <li> <a href = "../../../index.html">Back to home page</a> </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    
+    
+    <ul>
+        {% for photo in pagination.items %}
+            <img src = "{{photo.src.landscape}}" alt = "{{photo.alt}}">
+        {% endfor %}
+    </ul>
+
+
+
+</main>

@@ -1,6 +1,7 @@
 ---
 layout: base.html
 title: Space Collection
+
 ---
 
 <!-- photo collection (space) id: vsjdlqy-->
@@ -17,12 +18,9 @@ title: Space Collection
 </header>
 
 <main>
-    <ul>
-        {% for photo in photos.vsjdlqy.media -%}
-            <a href = "{{photo.src.large}}"><img src = "{{photo.src.tiny}}" alt = "{{photo.alt}}" ></a>
-        {% endfor -%}
-    </ul>
-
+    {% for photo in photos.vsjdlqy.media %}
+        <a href = "photos/{{photo.id}}"><img src = "{{photo.src.tiny}}" alt = "{{photo.alt}}" ></a>
+    {% endfor %}
 </main>
 
 <footer>

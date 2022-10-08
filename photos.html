@@ -6,29 +6,28 @@ pagination:
     size: 1
     alias: photo
     
-permalink: photos/{{ photo.id}}/index.html
+permalink: "photos/{{ photo.id}}/index.html"
 
 eleventyComputed:
     title: "{{photo.alt}}"
-
 ---
-
 
 <header>
     <h1> {{title}}</h1>
+    <a href = "/"> ab</a>
     <nav>
         <ul>
            <li> <a href = "../../index.html">Home</a> </li>
            <li>
                 {% if pagination.href.previous %}
-                    <a href="{{ pagination.href.previous }}">Previous</a>
+                    <a href="../..{{ pagination.href.previous }}index.html">Previous</a>
                 {% else %}
                     Previous
                 {% endif %}
             </li>
             <li>
                 {% if pagination.href.next %}
-                    <a href="{{ pagination.href.next }}">Next</a>
+                    <a href="../..{{pagination.href.next }}index.html">Next</a>
                 {% else %}
                     Next
                 {% endif %}

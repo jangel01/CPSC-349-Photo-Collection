@@ -12,34 +12,37 @@ eleventyComputed:
     title: "{{photo.alt}}"
 ---
 
-<header>
-    <h1> {{title}}</h1>
-    <a href = "/"> ab</a>
-    <nav>
-        <ul>
-           <li> <a href = "../../index.html">Home</a> </li>
-           <li>
-                {% if pagination.href.previous %}
-                    <a href="../..{{ pagination.href.previous }}index.html">Previous</a>
-                {% else %}
-                    Previous
-                {% endif %}
-            </li>
-            <li>
-                {% if pagination.href.next %}
-                    <a href="../..{{pagination.href.next }}index.html">Next</a>
-                {% else %}
-                    Next
-                {% endif %}
-            </li>
-        </ul>
-    </nav>
-</header>
-
 <main>
-      
-    {% for photo in pagination.items %}
+
+    <figure>
+        <figcaption>{{title}}</figcaption>
         <img src = "{{photo.src.landscape}}" alt = "{{photo.alt}}">
-    {% endfor %}
+    </figure>
+    
+    
+    <section>
+        <p>Photographer: <a href = "{{photo.photographer_url}}" target = "_blank">
+            {{photo.photographer }} </a></p>
+
+        <nav>
+            <ul>
+                <li>
+                    {% if pagination.href.previous %}
+                        <a href="../..{{ pagination.href.previous }}index.html">Previous</a>
+                    {% else %}
+                        Previous
+                    {% endif %}
+                </li>
+                <li> <a href = "../../index.html">Home</a> </li>
+                <li>
+                    {% if pagination.href.next %}
+                        <a href="../..{{pagination.href.next }}index.html">Next</a>
+                    {% else %}
+                        Next
+                    {% endif %}
+                </li>
+            </ul>
+        </nav>
+    </section>
     
 </main>

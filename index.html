@@ -17,11 +17,20 @@ title: Space Collection
     </nav>
 </header>
 
-<main> 
-    <h2> Cool collection of space photos</h2>
+<main>
+    <section>
+
+    <h2> Cool collection of space photos </h2>
     
+    <hr>
+
     {% for photo in photos.vsjdlqy.media %}
-        <a href = "photos/{{photo.id}}/index.html"><img src = "{{photo.src.tiny}}" alt = "{{photo.alt}}" ></a>
-    {% endfor %}   
+        <aside>
+            <a href = "photos/{{photo.id}}/index.html"><img src = "{{photo.src.tiny}}" alt = "{{photo.alt}}" ></a>
+        </aside>
+    {% endfor %}  
+
+    </section>
+
 </main>
 

@@ -4,4 +4,11 @@ module.exports = function (eleventyConfig) {
     notify: true,
     open: true
   })
+
+  return {
+    dir : {
+      input: ".",
+      output: "docs"
+    }
+  }
 }

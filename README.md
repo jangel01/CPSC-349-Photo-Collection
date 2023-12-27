@@ -1,3 +1,5 @@
+CPSC 349 - Web Front End Enginnering
+
 # Getting started with Project 1
 
 Clone the cpsc349-project1 repository locally:
